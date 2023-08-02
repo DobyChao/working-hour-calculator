@@ -196,7 +196,7 @@ class WorkHours:
 
 if __name__ == "__main__":
     year_month = datetime.date.today().strftime('%Y-%m')
-    save_dir = os.path.join(os.path.dirname(__file__), 'data')
+    save_dir = os.path.join(os.getcwd(), 'data')
     os.makedirs(save_dir, exist_ok=True)
     json_file = os.path.join(save_dir, year_month + '.json')
     work_hour_instance = WorkHours(json_file)
